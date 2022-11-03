@@ -14,7 +14,7 @@ int main(void) {
 	init_game(su, ans, bb);
 	
 	while (1) {
-		printf("1~4の座標と入れる数字を入力(x:横, y:縦)\n");
+		printf("1~9の座標と入れる数字を入力(x:横, y:縦)\n");
 		put_table(bb);
 
 		printf("x="); scanf("%d", &x);
