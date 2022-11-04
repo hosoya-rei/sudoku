@@ -16,6 +16,6 @@ void shuffle_template(int x[][SIZE]);
 void shuffle(int a, int b, int x[][SIZE]);
 void shuffle_2(int a, int b, int x[][SIZE]);
 void shuffle_tmp_2(int x[][SIZE]);
-void create_dis_array(int x[][SIZE], char y[][SIZE]);
+void create_dis_array(int difi, int x[][SIZE], char y[][SIZE]);
 
 #endif //_SHUFFLE_H_

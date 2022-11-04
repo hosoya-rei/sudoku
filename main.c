@@ -9,15 +9,32 @@ int main(void) {
 	int array[SIZE][SIZE];
 	int num19[SIZE];
 	char ba[SIZE][SIZE]; //なんマスか消した表示用
+	int difi;
 	
 	make_template(num19, array);	
 	shuffle_template(array);
 	shuffle_tmp_2(array);
 
-	create_dis_array(array, ba);
 	
 
 	printf("sudoku!!\n");
+	while (1) {
+		printf("難易度を入力:(初級:1, 中級:2, 上級:3)=>"); scanf("%d", &difi);	
+		if (difi < 4 && difi > 0) {	
+			switch (difi) {
+				case 1:
+					create_dis_array(45, array, ba);
+					break;
+				case 2:
+					create_dis_array(55, array, ba);
+					break;
+				case 3:
+					create_dis_array(70, array, ba);
+					break;
+			}
+			break;
+		}
+	}
 	put_table(ba);
 	
 	while (1) {

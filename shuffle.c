@@ -1,9 +1,9 @@
 #include "shuffle.h"
 
-void create_dis_array(int x[][SIZE], char y[][SIZE]) {
+void create_dis_array(int difi, int x[][SIZE], char y[][SIZE]) {
 	j = 0;
 	char xx[SIZE * SIZE];
-	int dis_num[45];
+	int dis_num[difi];
 	for (i = 0; i < SIZE; i++) {
 		for (k = 0; k < SIZE; k++) {
 			char i_c = '0' + x[i][k];
@@ -12,7 +12,7 @@ void create_dis_array(int x[][SIZE], char y[][SIZE]) {
 	}
 	srand((unsigned int)time(NULL));
 	i = 0;
-	while (i < 45) {  //空白の場所をランダムで
+	while (i < difi) {  //空白の場所をランダムで
 		dis_num[i] = rand() %81 +0;
 		if (i != 0) {
 			for (k = 0; k < i; k++) {	
@@ -23,7 +23,7 @@ void create_dis_array(int x[][SIZE], char y[][SIZE]) {
 		}
 		i++;
 	}	
-	for (i = 0; i < 45; i++) {  //空白の位置に'.'を代入
+	for (i = 0; i < difi; i++) {  //空白の位置に'.'を代入
 		int n = dis_num[i];
 		xx[n] = '.';
 	}		
